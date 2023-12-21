@@ -18,6 +18,25 @@ app.use(express.static(publicDirPath))
 
 app.get('/', (req, res) => {
     res.render('index', {
+        title: 'Home'
+    })
+})
+
+app.get('/calculator', (req, res) => {
+    res.render('calculator', {
+        title: 'Calculator'
+    })
+})
+
+app.get('/news', (req, res) => {
+    res.render('news' , {
+        title: 'News'
+    })
+})
+
+app.get('/resources', (req, res) => {
+    res.render('resources' , {
+        title: 'Resources'
     })
 })
 
