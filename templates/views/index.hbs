@@ -5,9 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
     {{>header}}
+    <div class="hero-image">
+            <img src="./img/hero_banner_img.jpeg">
+            <div class="hero-text">
+                <h1>"The world is witnessing a disturbing acceleration in the number, speed and scale of broken climate records...86 days have been recorded with temperatures exceeding 1.5°C above pre-industrial levels this year."</h1>
+            </div>
+        </div>
+    <div class="main-content">
+
+        <section id="mission-statement">
+            <h1>OUR MISSION</h1>
+            <p>At CAE, we are dedicated to providing users with vital information on air quality and carbon emissions. Our mission is to educate, inspire, and empower individuals to understand the impact of their actions on the environment. Through real-time data and practical tools, we aim to guide users in making informed choices, reducing their carbon footprint, and collectively working towards a healthier, sustainable future.</p>
+        </section>
+
+        <section id="impacts">
+            <h1>IMPACT OF CARBON EMISSIONS</h1>
+            <div id="card-container">
+                <div class="card">
+                    <p>Impact 1</p>
+                </div>
+                <div class="card">
+                    <p>Impact 2</p>
+                </div>
+                <div class="card">
+                    <p>Impact 3</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    {{>footer}}
     <script src="/js/app.js"></script>
 </body>
 </html>
