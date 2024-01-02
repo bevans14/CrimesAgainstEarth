@@ -3,7 +3,7 @@ const hbs = require('hbs')
 const path = require('path')
 const getAirQual = require('./utils/getAirQuality')
 const geocode = require('./utils/geolocate')
-const dbconfig = require('./dbconfig');
+const dbconfig = require('../dbconfig');
 
 const app = express();
 
