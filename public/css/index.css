@@ -58,10 +58,14 @@ section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    grid-template-rows: 100px 400px;
+    grid-template-rows: 1fr;
 }
 
 .card {
     text-align: center;
     background-color: #d5d5d5;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
