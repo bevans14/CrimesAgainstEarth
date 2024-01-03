@@ -3,6 +3,8 @@ const hbs = require('hbs')
 const path = require('path')
 const getAirQual = require('./utils/getAirQuality')
 const geocode = require('./utils/geolocate')
+const cityRanking = require('./utils/resources')
+const dbconfig = require('../dbconfig');
 
 const app = express();
 
@@ -14,7 +16,8 @@ app.set('view engine', 'hbs')
 app.set('views', viewsPath)
 hbs.registerPartials(partialsPath)
 
-app.use(express.static(publicDirPath)) 
+app.use(express.static(publicDirPath))
+app.use(express.json());
 
 app.get('/', (req, res) => {
     res.render('index', {
@@ -28,6 +31,11 @@ app.get('/calculator', (req, res) => {
     })
 })
 
+app.post('/board', (req, res) => {
+    const cityName = req.body.cityName;
+    console.log(cityName)
+})
+
 app.get('/news', (req, res) => {
     res.render('news' , {
         title: 'News'
@@ -38,6 +46,35 @@ app.get('/resources', (req, res) => {
     res.render('resources' , {
         title: 'Resources'
     })
+})
+
+app.get('/popularCity', (req, res) => {
+    const locations = [
+        { city: "Tokyo", state: "Tokyo", country: "Japan" },
+        { city: "Hong Kong", state: "Hong Kong", country: "Hong Kong" },
+        { city: "Mexico City", state: "Mexico City", country: "Mexico" },
+        { city: "New York City", state: "New York", country: "USA" },
+        { city: "Cairo City", state: "Cairo", country: "Egypt" }
+    ];
+
+    async function getAllCityRankings() {
+        const promises = locations.map(location =>
+             cityRanking(location.city, location.state, location.country)
+                .then(data => data = {
+                    city: data.city,
+                    state: data.state,
+                    country: data.country,
+                    airQual: data.current
+                })
+        );
+    
+        return Promise.all(promises);
+    }
+    
+    getAllCityRankings()
+        .then(results => {
+            res.send(results)
+        });
 })
 
 app.get('/search', (req, res) => {
