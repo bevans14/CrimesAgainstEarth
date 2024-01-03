@@ -69,3 +69,54 @@ section {
     flex-direction: column;
     justify-content: space-between;
 }
+
+
+* newsletter info box  */
+
+.footer_col0 {
+    /* flex-wrap: wrap; */
+    box-sizing: border-box;
+    padding: 15px;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    /* bottom: 0; */
+    position:relative;
+    width: 100vw;
+    background-color: #222;
+}
+
+.footer_col0 h4 {
+    color: #855656;
+    margin-bottom: 25px;
+    font-size: 20px;
+    position: relative;
+    display: inline-block;  
+    margin-top: 20px;
+
+}
+
+.footer_col0 input {
+    border: none;
+    width: 250px;
+    height: 35px;
+    /* display: block; */
+    padding-left: 20px;
+    margin: 14px 0;
+}
+
+/* button for newsletter */
+.footer_col0 .inputSubmit {
+    padding: 0px 20px;
+    background-color: rgb(105, 86, 82);
+    border: none;
+    color: #fff;
+}
+
+
+/* SUBMIT BUTTON HOVER */
+.footer_col0 .inputSubmit:hover {
+    background-color: rgb(192, 172, 154);
+    color: #fff;
+}
