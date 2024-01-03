@@ -8,6 +8,14 @@
 </head>
 <body>
     {{>header}}
-    <script src="/js/app.js"></script>
+    <form>
+        <label for="city">Enter city here</label>
+        <input type="text" id="cityInput" name="city">
+        <button id="submit" onclick="displayData()">submit</button>
+    </form>
+
+<section id="dataDisplay"></section>
+
+    <script src="./js/brooke.js"></script>
 </body>
 </html>
