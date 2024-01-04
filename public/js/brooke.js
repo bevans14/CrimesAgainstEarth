@@ -14,7 +14,6 @@ form.addEventListener('submit', (e)=> {
             } else if (AQI > 100){
                 const AQI = data[0].air_quality_us
                 message.textContent = `The air quality index of your city is ${AQI}`;
-
             }
         })
     })
