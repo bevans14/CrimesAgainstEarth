@@ -1,7 +1,7 @@
 const fetch = require('node-fetch')
-
+const apiKey = "65972e9e83d02408599246pxa9981e6"
 function getGeolocation(location) {
-    const url = `https://geocode.maps.co/search?q=${location}`
+    const url = `https://geocode.maps.co/search?q=${location}&api_key=${apiKey}`
     return fetch(url)
         .then(response => response.json())
         .then(result => [{
@@ -11,5 +11,9 @@ function getGeolocation(location) {
         }])
         .catch(error => console.log('error', error))
 }
-
 module.exports = getGeolocation;
+
+
+
+
+
