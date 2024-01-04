@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     {{>header}}
-    <form>
+  
+<form id="cityForm">
         <label for="city">Enter city here</label>
         <input type="text" id="cityInput" name="city">
-        <button id="submit" onclick="displayData()">submit</button>
+        <button value="Submit" type="submit">Submit</button>
     </form>
+    <p id="message"></p>
 
-<section id="dataDisplay"></section>
+
 
     <script src="./js/brooke.js"></script>
 </body>

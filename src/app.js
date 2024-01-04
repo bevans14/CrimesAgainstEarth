@@ -2,7 +2,7 @@ const express = require('express')
 const hbs = require('hbs')
 const path = require('path')
 const getAirQual = require('./utils/getAirQuality')
-const geocode = require('./utils/geolocate')
+const geolocate = require('./utils/geolocate')
 
 const app = express();
 
@@ -44,13 +44,13 @@ app.get('/search', (req, res) => {
     if(!req.query.location) {
         return res.send('error', error)
     }
-    geocode(req.query.location).then(result => {
+    geolocate(req.query.location).then(result => {
         if(!result) {
             return res.send({error: 'Unable to find city. Try again!'})
         }
         getAirQual(result[0].lat, result[0].long).then(result => {
             if(!result) {
-                return res.send({error: 'Unable to find city. Try again!'})
+                return res.send({error: 'Unable to find city or city not supported. Try again!'})
             }
             res.send(result)
         })
