@@ -1,4 +1,34 @@
 
+{{!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/news.css">
+</head>
+
+<body>
+    {{>header}}
+
+    <div class="articles-container">
+        <br>
+        <ul class="news-list"></ul>
+    </div>
+
+    <div class="pagination-container">
+        <button id="prevButton">Previous</button>
+        <button id="nextButton">Next</button>
+    </div>
+
+ 
+
+</body>
+<script type="module" src="public/articles.js"></script>
+        <script type="module" src="/js/articlesElements.js"></script>
+
+</html> --}}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,19 +46,19 @@
         <ul class="news-list"></ul>
     </div>
 
-
     <div class="pagination-container">
         <button id="prevButton">Previous</button>
         <button id="nextButton">Next</button>
     </div>
 
- 
+    <div class="category-buttons">
+        <button id="defaultButton">Default</button>
+    <button id="airQualityButton">Air Quality</button>
+    <button id="carbonEmissionsButton">Carbon Emissions</button>
+    </div>
 
+    <script type="module" src="/js/articlesElements.js"></script>
 </body>
-<script type="module" src="public/articles.js"></script>
-        <script type="module" src="/js/articlesElements.js"></script>
-{{!-- <script type="module" src="/customScript.js"></script> --}}
-
 </html>
 
 

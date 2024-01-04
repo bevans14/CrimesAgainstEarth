@@ -1,25 +1,24 @@
 // articles.js
 
 const articlesModule = (function () {
+    let searchTerms = ['air quality impact', 'carbon emissions impact']; // Default search terms
     const newsList = document.querySelector('.news-list');
     const articlesPerPage = 6;
     let currentPage = 1;
 
-    // setting predefined search terms
-    const searchTerms = ['air quality impact', 'carbon emissions impact'];
+    // Function to set new search terms
+    function setSearchTerms(newSearchTerms) {
+        searchTerms = newSearchTerms;
+    }
 
-    // will convert the array to a JSON-formatted string and encode it
-    const encodedSearchTerms = encodeURIComponent(searchTerms.join(' OR '));
-
-    // construct the URL with the encoded search terms
-    const apiKey = '22b1cd3d53d24602b7bed8a389daa31c';
-    const articleUrl = 'https://newsapi.org/v2/everything';
-    const url = `${articleUrl}?q=${encodedSearchTerms}&apiKey=${apiKey}`;
-
-    // function to fetch articles for a specific page
+    // Function to fetch articles for a specific page
     async function fetchArticles(page) {
         const startIndex = (page - 1) * articlesPerPage;
         const endIndex = startIndex + articlesPerPage;
+        const encodedSearchTerms = encodeURIComponent(searchTerms.join(' OR '));
+        const apiKey = '22b1cd3d53d24602b7bed8a389daa31c';
+        const articleUrl = 'https://newsapi.org/v2/everything';
+        const url = `${articleUrl}?q=${encodedSearchTerms}&apiKey=${apiKey}`;
 
         try {
             // Fetch API... return JSON object
@@ -32,9 +31,10 @@ const articlesModule = (function () {
         }
     }
 
-    // Export the fetchArticles function
+    // Export the fetchArticles and setSearchTerms functions
     return {
         fetchArticles,
+        setSearchTerms,
     };
 })();
 

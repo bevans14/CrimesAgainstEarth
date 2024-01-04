@@ -11,7 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f3f3f3;
+    /* background-color: #f3f3f3; */
 }
 
 .articles-container {
@@ -81,6 +81,21 @@ body {
 
 /* Style for previous and next buttons */
 .pagination-container button {
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #a9bdcc;
+    color: white;
+    padding: 8px;
+}
+
+/* Add these styles for category buttons */
+.category-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 9%;
+}
+
+.category-buttons button {
     cursor: pointer;
     border: 1px solid #888888;
     background: #a9bdcc;
