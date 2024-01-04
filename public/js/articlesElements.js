@@ -1,13 +1,47 @@
-// customScript.js
+// articlesElements.js
 import articlesModule from '../articles.js';
 
-let currentPage = 1;  // set variable for initialize currentPage
+let currentPage = 1;
 
 // Function to initialize the page & setting up event listeners
 function initializePage() {
-    // fetch and display for the first page
+    // Fetch and display for the first page
     fetchAndDisplayArticles(currentPage);
+    // Set up event listeners for category buttons
+    setupCategoryButtons();
 }
+
+// Function to set up event listeners for category buttons
+function setupCategoryButtons() {
+    const airQualityButton = document.getElementById('airQualityButton');
+    const carbonEmissionsButton = document.getElementById('carbonEmissionsButton');
+    const defaultButton = document.getElementById('defaultButton'); // Add this line
+
+    airQualityButton.addEventListener('click', () => {
+        // Set search terms for air quality
+        articlesModule.setSearchTerms(['air quality impact']);
+        // Reset current page and fetch articles
+        currentPage = 1;
+        fetchAndDisplayArticles(currentPage);
+    });
+
+    carbonEmissionsButton.addEventListener('click', () => {
+        // Set search terms for carbon emissions
+        articlesModule.setSearchTerms(['carbon emissions impact']);
+        // Reset current page and fetch articles
+        currentPage = 1;
+        fetchAndDisplayArticles(currentPage);
+    });
+
+    defaultButton.addEventListener('click', () => {
+        // Set default search terms
+        articlesModule.setSearchTerms(['air quality impact', 'carbon emissions impact']);
+        // Reset current page and fetch articles
+        currentPage = 1;
+        fetchAndDisplayArticles(currentPage);
+    });
+}
+
 
 // Function to clear the list and create new elements for articles
 function clearListAndDisplayArticles(data) {
@@ -83,3 +117,4 @@ prevButton.addEventListener('click', () => {
 
 // 'call' the initializePage function to set up the page
 initializePage();
+

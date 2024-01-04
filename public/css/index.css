@@ -37,6 +37,12 @@ body {
     object-position: center;
 }
 
+video {
+    width: 100%; /* Make the video fill the entire container width */
+    height: auto; /* Maintain the video's aspect ratio */
+    border-radius: 10px; /* Add rounded corners if desired *//
+}
+
 section {
     margin: 50px 0;
 }
