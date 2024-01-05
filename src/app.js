@@ -4,7 +4,7 @@ const path = require('path')
 const getAirQual = require('./utils/getAirQuality')
 const geocode = require('./utils/geolocate')
 const cityRanking = require('./utils/resources')
-const dbconfig = require('../dbconfig');
+const connection = require('../dbconfig');
 
 const app = express();
 
@@ -18,6 +18,7 @@ hbs.registerPartials(partialsPath)
 
 app.use(express.static(publicDirPath))
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }))
 
 app.get('/', (req, res) => {
     res.render('index', {
@@ -47,6 +48,48 @@ app.get('/resources', (req, res) => {
         title: 'Resources'
     })
 })
+
+app.get('/unsub', (req, res) => {
+    res.render('unsub', {
+        title: 'Unsubscribe'
+    })
+})
+
+app.post('/unsub', (req, res) => {
+    const email = req.body.email;
+
+    const matchingQuery = `
+    SELECT email
+    FROM userInfo
+    WHERE email = '${email}'
+    `;
+
+    const deleteQuery = `
+    DELETE FROM userInfo
+    WHERE email = '${email}'
+    `;
+
+    if(!email) {
+        console.log('No email inserted!')
+        res.redirect('/unsub')
+    } else {
+        connection.query(matchingQuery, (err, data) => {
+            if(data.length > 0) {
+                connection.query(deleteQuery, (err, data) => {
+                    if(err) {
+                        console.log(`ERROR! Error message: ${err}`)
+                    } else {
+                        console.log('Email successfully removed!')
+                        res.redirect('/unsub')
+                    }
+                })
+            } else {
+                console.log('No email found!')
+                res.redirect('/unsub')
+            }
+        })
+    }
+}) 
 
 app.get('/popularCity', (req, res) => {
     const locations = [
@@ -92,6 +135,39 @@ app.get('/search', (req, res) => {
             res.send(result)
         })
     })
+})
+
+app.post('/signup', (req, res) => {
+    const email = req.body.email;
+    const name = req.body.name;
+
+    const insertQuery = `
+    INSERT INTO userInfo (email, username)
+    VALUES ('${email}', '${name}')
+    `;
+
+    const matchingQuery = `
+    SELECT email
+    FROM userInfo
+    WHERE email = '${email}'
+    `;
+
+    if(!email) {
+        console.log('No email inputted.')
+        res.redirect('/')
+    } else {
+        connection.query(matchingQuery, (err, data) => {
+            if(data.length > 0) {
+                console.log('Email already in database!')
+                res.redirect('/')
+            } else {
+                connection.query(insertQuery, function (error, data) {
+                    console.log('Thanks for signing up')
+                    res.redirect('/')
+                })
+            }
+        })
+    }
 })
 
 app.listen(3000, (err) => {
