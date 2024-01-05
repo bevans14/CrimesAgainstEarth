@@ -1,20 +1,22 @@
 // const mysql = require('mysql2');
 
-// const connection = mysql.createConnection({
-//   host: 'localhost',
-//   user: "root",
-//   password: "password",
-//   database: 'carbonEmissionCities',
-//   port: 3306,
-// });
 
+const connection = mysql.createPool({
+  host: 'crimesagainstearth1.c7g842qe6h75.us-east-2.rds.amazonaws.com',
+  port: '3306',
+  user: 'root',
+  password: 'password',
+  database: 'crimesAgainstEarth'
+})
 
-// connection.connect((err) => {
-//   if (err) {
-//     console.error('Error connecting to MySQL:', err);
-//     return;
-//   }
-//   console.log('Connected to MySQL database');
-// });
+connection.getConnection((err, connection) => {
+  if (err) {
+      console.log('Error connecting to the database:', err);
+      return;
+  } 
+  console.log('Connection successful!')
+  connection.release();
+})
 
-// module.exports = connection;
+module.exports = connection;
+
