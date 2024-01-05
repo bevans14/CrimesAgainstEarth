@@ -11,9 +11,17 @@ form.addEventListener('submit', (e)=> {
         response.json().then((data) => {
             if(data.error) {
                 message.textContent = data.error;
-            } else if (AQI > 100){
+            } else if (AQI >= 100){
                 const AQI = data[0].air_quality_us
-                message.textContent = `The air quality index of your city is ${AQI}`;
+                // const contributer = 
+                message.textContent = `Oh no! The air quality index of your city is ${AQI}`;
+                if (AQI >= 50){
+                    message.textContent = `Oh no! The air quality index of your city is ${AQI}`;
+                if (AQI <= 50){
+
+                }
+
+                }
             }
         })
     })
