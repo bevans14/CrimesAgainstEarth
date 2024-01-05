@@ -60,12 +60,12 @@ app.post('/unsub', (req, res) => {
 
     const matchingQuery = `
     SELECT email
-    FROM userInfo
+    FROM subscriptions
     WHERE email = '${email}'
     `;
 
     const deleteQuery = `
-    DELETE FROM userInfo
+    DELETE FROM subscriptions
     WHERE email = '${email}'
     `;
 
@@ -142,13 +142,13 @@ app.post('/signup', (req, res) => {
     const name = req.body.name;
 
     const insertQuery = `
-    INSERT INTO userInfo (email, username)
-    VALUES ('${email}', '${name}')
+    INSERT INTO subscriptions (name, email)
+    VALUES ('${name}', '${email}')
     `;
 
     const matchingQuery = `
     SELECT email
-    FROM userInfo
+    FROM subscriptions
     WHERE email = '${email}'
     `;
 
