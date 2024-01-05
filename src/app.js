@@ -170,6 +170,13 @@ app.post('/signup', (req, res) => {
     }
 })
 
+app.get("*", (req, res) => {
+    res.render('error', {
+        title: 'ERROR',
+        error: `You're not supposed to be here. GET OUT! SOMEONE CALL 404!`
+    })
+})
+
 app.listen(3000, (err) => {
     if(err) {
         throw err;
