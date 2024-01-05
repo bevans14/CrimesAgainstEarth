@@ -1,4 +1,5 @@
-const mysql = require('mysql2');
+// const mysql = require('mysql2');
+
 
 const connection = mysql.createPool({
   host: 'crimesagainstearth1.c7g842qe6h75.us-east-2.rds.amazonaws.com',
@@ -18,3 +19,4 @@ connection.getConnection((err, connection) => {
 })
 
 module.exports = connection;
+

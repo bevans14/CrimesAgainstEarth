@@ -1,0 +1,43 @@
+header {
+    background-color: #fff;
+}
+
+#navheadercolor {
+    background-color: #A2AAAD;
+    box-shadow: -1px -1px 0 #2b2b2b, 1px -1px 0 #2b2b2b, -1px 1px 0 #2b2b2b, 1px 1px 0 #2b2b2b;
+}
+
+nav ul {
+    padding: 0;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav li {
+    display: inline-block;
+    position: relative;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+#logo {
+    width: 25%;
+    height: 25%;
+    margin: 10px;
+    padding: 10px;
+}
+
+#logocenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
