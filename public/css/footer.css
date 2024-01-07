@@ -13,7 +13,7 @@
 
 footer {
     bottom: 0;
-    background-color: #F1f1f1;
+    background-color: #000;
     /* background-image: linear-gradient(to right, #F99D25, rgba(0, 0, 0, 0.5)); */
     text-decoration: none;
     position: relative;
@@ -36,7 +36,7 @@ footer li {
 footer a,
 h2,
 h1 {
-    color: black;
+    color: #F1f1f1;;
 }
 
 footer a:hover {
@@ -44,7 +44,7 @@ footer a:hover {
 }
 
 footer p {
-    color: black;
+    color: #F1f1f1;;
 }
 
 .copyright a {
@@ -58,7 +58,7 @@ footer p {
     border-radius: 8px;
     /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
     text-align: left;
-    color: black;
+    color: #F1f1f1;;
 }
 
 .social-media-icons a img {
