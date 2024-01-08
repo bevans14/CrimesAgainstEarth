@@ -57,6 +57,7 @@ function clearListAndDisplayArticles(data) {
     data.articles.slice(startIndex, endIndex).forEach((article) => {
         let li = document.createElement('li');
         let articleContainer = document.createElement('div'); // container for the image, title, and description
+        articleContainer.classList.add('text'); // Add the 'text' class
         let img = document.createElement('img');
         let a = document.createElement('a');
         let articleName = document.createElement('p'); // paragraph for article title
@@ -80,13 +81,13 @@ function clearListAndDisplayArticles(data) {
         description.textContent = article.description;
 
         // append image, anchor tag, article name, & description to the container
-        articleContainer.appendChild(img);
         articleContainer.appendChild(a);
         articleContainer.appendChild(articleName);
         articleContainer.appendChild(description);
 
         // appending the container to the list element
         li.appendChild(articleContainer);
+        li.appendChild(img);
 
         newsList.appendChild(li);
     });

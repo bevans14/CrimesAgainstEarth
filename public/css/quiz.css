@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600;700&display=swap');
+
 *, *::before, *::after {
     box-sizing: border-box;
     font-family: Gotham Rounded;
@@ -15,33 +17,81 @@
     margin: 0;
     width: 100vw;
     height: 100vh;
-    justify-content: center;
-    align-items: center;
-    /* background-color: hsl(var(--hue), 100%, 20%); */
+
   }
   
-  body.correct {
-    --hue: var(--hue-correct);
-  }
+
+
+/* image slideshow */
+.slideshow-container {
+  max-width: 100vw;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
   
-  body.wrong {
-    --hue: var(--hue-wrong);
-  }
+}
+
+.slides {
+  display: none;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.slides.fade {
+  opacity: 1;
+  display: block;
+  width: 100vw;
+  height: fit-content;
+  -webkit-animation-name: fade;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 8s;
+  animation-name: fade;
+  animation-iteration-count: infinite;
+  animation-duration: 8s;
+}
+
+@-webkit-keyframes fade {
+  0% {opacity: 0;}
+  20% {opacity: 1;}
+  33% {opacity: 1;}
+  53% {opacity: 1;}
+  80% {opacity: 0;}
+  100% {opacity: 0;}
+}
+@keyframes fade {
+  0% {opacity: 0;}
+  20% {opacity: 1;}
+  33% {opacity: 1;}
+  53% {opacity: 1;}
+  80% {opacity: 0;}
+  100% {opacity: 0;}
+}
+
+.slides img {
+  height: 600px;
+  width: 100vw;
+  object-fit: cover;
+}
+
   
   .container {
-    width: px;
+    width: 800px;
     max-width: 80%;
     background-color: white;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
-    background-color: hsl(var(--hue), 100%, 20%);
+    background-color: hsl(var(--hue), 100%, 96%);
+    height: fit-content;
+    margin-bottom: 20px;
   }
   
   .btn-grid {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
     margin: 20px 0;
   }
   
@@ -50,13 +100,18 @@
     border: 1px solid hsl(var(--hue), 100%, 30%);
     background-color: hsl(var(--hue), 100%, 50%);
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 25px;
+    margin: 10px;
     color: white;
     outline: none;
+    font-size: 20px;
+    transition: transform 0.5s ease-in-out;
   }
   
   .btn:hover {
     border-color: black;
+    transform: scale(1.1); 
+  cursor: pointer;
   }
   
   .btn.correct {
@@ -78,8 +133,96 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  
   }
   
   .hide {
     display: none;
+  }
+
+  #question{
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; 
+    font-family: 'Poppins', sans-serif;
+  }
+
+  #question.active {
+    opacity: 1;
+    transform: translateY(0); 
+     font-size: 40px;
+     font-family: 'Poppins', sans-serif;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+    width: 75%;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+ 
+  .grid{
+    width: 75%;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+display: flex;
+flex-direction: column;
+align-items: center;
+box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+background-color: #d5d5d5;
+
+  } 
+
+  .allDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .rightDiv{
+    justify-content: center;
+    text-align: center;
+    width: 75%;
+    height: 425px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    margin: auto;
+    padding: 20px;
+    padding-bottom: 15px;
+    margin-top: 20px;
+    background-color: #eff3f4;
+  }
+  h2{
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  #cityInput{
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+  }
+
+  #cityForm{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+   align-items: center;
+   margin-bottom: 15px;
+  }
+
+  #message{
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+
+  .formButton{
+width: 150px;
+height: 50px;
+font-family: 'Poppins', sans-serif;
+border-radius: 10px;
   }

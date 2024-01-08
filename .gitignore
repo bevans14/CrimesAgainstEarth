@@ -1,3 +1,2 @@
 node_modules/
-dbconfig
-.DS_Store
+dbconfig.js
