@@ -4,20 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/quiz.css">
 </head>
 <body>
     {{>header}}
   
+<div class="slideshow-container">
+  <div class="slides fade">
+    <img class="image1" src="./img/CAEimg1.jpg" alt="Image 1">
+  </div>
+  <div class="slides fade">
+    <img class="image2" src="./img/CAEimg2.jpg" alt="Image 2">
+  </div>
+  <div class="slides fade">
+    <img class="image3" src="./img/CAEimg3.jpg" alt="Image 3">
+  </div>
+   <div class="slides fade">
+    <img class="image3" src="./img/CAEimg4.jpg" alt="Image 3">
+  </div>
+ <div class="slides fade">
+    <img class="image3" src="./img/CAEimg5.jpg" alt="Image 3">
+  </div>
+   <div class="slides fade">
+    <img class="image3" src="./img/CAEimg6.jpg" alt="Image 3">
+  </div>
+</div>
+<div class="allDiv">
+  <di class="topsection">
+   <img class="aqiimg" src="./img/CAEaqi1.png">
+<div class="rightDiv">
+<h2>Curious about your city? Enter your city below to get details regarding the air quality you breathe in.</h2>
 <form id="cityForm">
-        <label for="city">Enter city here</label>
         <input type="text" id="cityInput" name="city">
-        <button value="Submit" type="submit">Submit</button>
+        <button class="formButton" value="Submit" type="submit">Submit</button>
     </form>
     <p id="message"></p>
-
+</div>
+</div>
+<div class="innovationsection">
+<img class="innovationimg" src="./img/CAEimg7.jpg" alt="Image 3">
+<div class="innovationp">
+  <ul>
+    <li>
+  <p>Innovative devices like electrostatic precipitators, scrubbers, and catalytic converters help reduce emissions of harmful pollutants from industries and vehicles.</p></li>
+  <li><p>Smart grid technologies and energy storage systems improve the efficiency of energy distribution, reduce wastage, and promote the integration of renewable energy sources into the grid.</p></li>
+  <li><p>Advancements in solar, wind, hydroelectric, and geothermal technologies have improved energy generation while reducing reliance on fossil fuels, thereby cutting down air pollution from power plants.</p></li>
+  <li><p>Technologies like precision farming, using drones, sensors, and AI, optimize resource use, reducing the environmental impact of agriculture by minimizing chemical usage and maximizing crop yield.</p></li>
+  <li><p>CCS technologies capture carbon dioxide emissions from industrial processes or power generation and store them underground, preventing their release into the atmosphere.</p></li>
+  </ul>
+</div>
+</div>
+<div class="leftDiv">
+<div class="grid">
+ <div id="question">Ready to change the world? Take this quiz to test your skills.</div>
+<div class="container">
+    <div id="question-container" class="hide">
+        <div class="rightContainer"></div>
+      <div id="answer-buttons" class="btn-grid">
+        <button class="btn">Answer 1</button>
+        <button class="btn">Answer 2</button>
+        <button class="btn">Answer 3</button>
+        <button class="btn">Answer 4</button>
+      </div>
+     
+    </div>
+    <div class="controls">
+      <button id="start-btn" class="start-btn btn">Start</button>
+      <button id="next-btn" class="next-btn btn hide">Next</button>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+   
 
 
     <script src="./js/brooke.js"></script>
+</script>
 </body>
 </html>

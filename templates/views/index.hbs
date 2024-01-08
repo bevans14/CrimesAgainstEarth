@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Air Quality - Homepage</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css">
-<script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
 </head>
+
 <body>
-    {{>header}}
+    {{>header}}                     
     <div class="hero-image">
             {{!-- <img src="./img/hero_banner_img.jpeg"> --}}
             <video autoplay muted loop>
@@ -20,36 +20,84 @@
                 <h1>"The world is witnessing a disturbing acceleration in the number, speed and scale of broken climate records...86 days have been recorded with temperatures exceeding 1.5°C above pre-industrial levels this year."</h1>
             </div>
         </div>
-    <div class="main-content">
 
+
+         <div class="main-wrappers">
+    <div class="main-content">
         <section id="mission-statement">
             <h1>OUR MISSION</h1>
             <p>At CAE, we are dedicated to providing users with vital information on air quality and carbon emissions. Our mission is to educate, inspire, and empower individuals to understand the impact of their actions on the environment. Through real-time data and practical tools, we aim to guide users in making informed choices, reducing their carbon footprint, and collectively working towards a healthier, sustainable future.</p>
         </section>
 
         <section id="impacts">
-            <h1>PURPOSE</h1>
-            <div id="card-container">
-                <div class="card">
-                    <h2>WHAT</h2>
-                    <p>What are carbon emissions? Carbon emissions are sources of emissions that produce harmful gas such as CO2 (Carbon Dioxide), CH4 (Methane), and N2O (Nitrous Oxide). Some major contributors of these poluttants include burning of fossil fuels, transportation, manure, and deforestation.</p>
-                    <a href="https://www.epa.gov/ghgemissions/global-greenhouse-gas-emissions-data#:~:text=Global%20Emissions%20by%20Gas,-At%20the%20global&text=Carbon%20dioxide%20(CO2)%3A,agriculture%2C%20and%20degradation%20of%20soils." target="_blank"><small>READ MORE HERE</small></a>
-                </div>
-                <div class="card">
-                    <h2>WHY</h2>
-                    <p>Why are we talking about it? Carbon emissions are on the rise once more, especially in effort to rebuild after economic shutdown due to the recent Covid-19 Pandemic. If we were to continue our emissions, we would exceed 1.5 degree Celcius pre-industrial era. This would lead to fatal heat, catastrophic floods, and rise in global temperatures. These are just a few effects if we were to continue our carbon emissions.</p>
-                    <a href="https://www.modeshift.com/what-is-the-importance-of-a-carbon-footprint-everything-you-need-to-know/" target="_blank"><small>READ MORE HERE</small></a>
-                </div>
-                <div class="card">
-                    <h2>HOW</h2>
-                    <p>How can you help? There are many ways to assist in slowing down our carbon emissions, it just takes the first step. You can use our calculator to see how big your carbon footprint is and see ways that maybe you can prevent additional carbon emission. More simple acts such as walking/biking to close destinations can also be your effort in reducing carbon emissions.</p>
-                    <a href="https://www.austintexas.gov/blog/top-10-ways-reduce-your-carbon-footprint-and-save-money" target="_blank"><small>READ MORE HERE</small></a>
-                </div>
+
+
+   <h1>PURPOSE</h1>
+<div class="row">
+<div class="col s12 m4">
+    <!-- Card 1 -->
+    <div class="card">
+        <div class="card-image">
+            <img src="./img/cardimg2.png">
+            <div class="card-title-container">
+                <h2>WHAT</h2>
             </div>
+        </div>
+        <div class="card-content">
+            <p>What are carbon emissions? Carbon emissions are sources of emissions that produce harmful gas such as CO2 (Carbon Dioxide), CH4 (Methane), and N2O (Nitrous Oxide). Some major contributors of these pollutants include burning of fossil fuels, transportation, manure, and deforestation.</p>
+        </div>
+        <div class="card-action">
+            <a href="https://www.epa.gov/ghgemissions/global-greenhouse-gas-emissions-data#:~:text=Global%20Emissions%20by%20Gas,-At%20the%20global&text=Carbon%20dioxide%20(CO2)%3A,agriculture%2C%20and%20degradation%20of%20soils." target="_blank">
+                <small>READ MORE HERE</small>
+            </a>
+        </div>
+    </div>
+</div>
 
+<div class="col s12 m4">
+    <!-- Card 2 -->
+    <div class="card">
+        <div class="card-image">
+            <img src="./img/cardimg1.png">
+            <div class="card-title-container">
+                <h2>WHY</h2>
+            </div>
+        </div>
+        <div class="card-content">
+            <p>Why are we talking about it? Carbon emissions are on the rise once more, especially in effort to rebuild after economic shutdown due to the recent Covid-19 Pandemic. If we were to continue our emissions, we would exceed 1.5 degrees Celsius pre-industrial era. This would lead to fatal heat, catastrophic floods, and a rise in global temperatures. These are just a few effects if we were to continue our carbon emissions.</p>
+        </div>
+        <div class="card-action">
+            <a href="https://www.modeshift.com/what-is-the-importance-of-a-carbon-footprint-everything-you-need-to-know/" target="_blank">
+                <small>READ MORE HERE</small>
+            </a>
+        </div>
+    </div>
+</div>
 
+<div class="col s12 m4">
+    <!-- Card 3 -->
+    <div class="card">
+        <div class="card-image">
+            <img src="./img/cardimg3.png">
+            <div class="card-title-container">
+                <h2>HOW</h2>
+            </div>
+        </div>
+        <div class="card-content">
+            <p>How can you help? There are many ways to assist in slowing down our carbon emissions; it just takes the first step. You can use our calculator to see how big your carbon footprint is and see ways that maybe you can prevent additional carbon emission. More simple acts such as walking/biking to close destinations can also be your effort in reducing carbon emissions.</p>
+        </div>
+        <div class="card-action">
+            <a href="https://www.austintexas.gov/blog/top-10-ways-reduce-your-carbon-footprint-and-save-money" target="_blank">
+                <small>READ MORE HERE</small>
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
            <!-- newsletter  -->
-
+           <div class="newsletter-container">
     <div class="footer_col0">
         <h4>Newsletter</h4>
          <form method="post" action="/signup">
@@ -57,15 +105,15 @@
             <input name="email" type="email" placeholder="Enter Email" class="inputEmail">
             <input type="submit" placeholder="Submit" class="inputSubmit">
          </form>
+         </div>
      </div>
 
 <div class="footer_container">
     <div class="row">
-
-        
         </section>
     </div>
     {{>footer}}
     <script src="/js/app.js"></script>
+
 </body>
 </html>

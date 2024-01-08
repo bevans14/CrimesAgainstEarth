@@ -1,49 +1,53 @@
-
-{{!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/news.css">
-</head>
-
-<body>
-    {{>header}}
-
-    <div class="articles-container">
-        <br>
-        <ul class="news-list"></ul>
-    </div>
-
-    <div class="pagination-container">
-        <button id="prevButton">Previous</button>
-        <button id="nextButton">Next</button>
-    </div>
-
- 
-
-</body>
-<script type="module" src="public/articles.js"></script>
-        <script type="module" src="/js/articlesElements.js"></script>
-
-</html> --}}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Air Quality News</title>
     <link rel="stylesheet" href="./css/news.css">
+
 </head>
 
 <body>
     {{>header}}
 
+        <!-- Image Banner -->
+    <div class="image-banner">
+        <img src="./img/newsbanner1.jpg" alt="Global News Image">
+    </div>
+
+    <div class="main-container">
+  <div class="intro-container">
+        <h2>Climate Change Impacts<br> on Air Quality</h2>
+        <p>
+            Explore the sections on this page to learn more about climate impacts on air quality.
+            Published news articles are populated by currrent up-to-date, valuable resources at a global spectrum. 
+            Articles are catagorized by either carbon emission or air quality impact- or you can simply 
+            click on all articles for both categories. 
+
+        </p>
+
+            <div class="category-buttons">
+        {{!-- <button id="defaultButton">All Articles</button>
+    <button id="airQualityButton">Air Quality</button>
+    <button id="carbonEmissionsButton">Carbon Emissions</button> --}}
+
+    <button id="defaultButton" class="btn-swipe-left">All Articles<span></span></button>
+<button id="airQualityButton" class="btn-swipe-left">Air Quality<span></span></button>
+<button id="carbonEmissionsButton" class="btn-swipe-left">Carbon Emissions<span></span></button>
+
+    </div>
+    </div>
+
+    
+</div>
+
+    <div class="content-container">
     <div class="articles-container">
         <br>
         <ul class="news-list"></ul>
+    </div>
+
     </div>
 
     <div class="pagination-container">
@@ -51,12 +55,8 @@
         <button id="nextButton">Next</button>
     </div>
 
-    <div class="category-buttons">
-        <button id="defaultButton">Default</button>
-    <button id="airQualityButton">Air Quality</button>
-    <button id="carbonEmissionsButton">Carbon Emissions</button>
-    </div>
-
+   
+ {{>footer}}
     <script type="module" src="/js/articlesElements.js"></script>
 </body>
 </html>

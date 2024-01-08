@@ -15,32 +15,4 @@ async function cityRanking(city, state, country) {
         .catch(err => console.log('error', err));
 }
 
-// const locations = [
-//     { city: "Tokyo", state: "Tokyo", country: "Japan" },
-//     { city: "Hong Kong", state: "Hong Kong", country: "Hong Kong" },
-//     { city: "Seoul", state: "Seoul", country: "South Korea" },
-//     { city: "Mexico City", state: "Mexico City", country: "Mexico" },
-//     { city: "New York City", state: "New York", country: "USA" }
-// ];
-
-// async function getAllCityRankings() {
-//     const promises = locations.map(location =>
-//          cityRanking(location.city, location.state, location.country)
-//             .then(data => data = {
-//                 city: data.city,
-//                 state: data.state,
-//                 country: data.country,
-//                 airQual: data.current.pollution.aqius
-//             })
-//     );
-
-//     return Promise.all(promises);
-// }
-
-// // Example usage
-// getAllCityRankings()
-//     .then(results => {
-//         console.log(results);
-//     });
-
 module.exports = cityRanking;

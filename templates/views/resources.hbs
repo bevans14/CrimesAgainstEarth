@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <title>Air Quality Map</title>
+   <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/index.css">
+    
 </head>
 <body>
     {{>header}}
-    <div  id='map'  style='height:380px; width:1000px;'></div>
+    <div  id='map'  style='height:380px; width:1000px; left:25%;'>
 
     <div>
         <ul></ul>
     </div>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWyhzbj3x1zDjbr_8XRquJpgwEaNyhsA0"></script>  
+</div>
     <script src="/js/app.js"></script>
     <script src="/js/resources.js"></script>
+    {{>footer}}
 </body>
 </html>

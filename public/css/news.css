@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,21 +8,93 @@
 }
 
 body {
+    font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     /* background-color: #f3f3f3; */
+    margin: 0;
+}
+
+/* image banner  */
+.image-banner {
+    position: relative;
+    width: 100%;
+    height: 61vh;
+    overflow: hidden;
+}
+
+.image-banner img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    object-fit: cover;
+}
+
+.main-container {
+    width: 100%;
+}
+/* first div box on top of page */
+
+.intro-container {
+    text-align: center;
+    /* margin-top: 20px; */
+    border: 1px solid #000;
+    background-color: hsla(248, 94%, 6%, 0.898);
+    padding: 51px;;
+    margin: 55px;
+}
+
+.intro-container h2 {
+    font-size: 36px;
+    color: #640f71; 
+    text-transform: uppercase;
+}
+
+.intro-container p {
+    font-size: 14px;
+    color: #333; 
+    line-height: 1.6;
+    padding: 20px;
+    margin: 4em;
+}
+
+/*  container to wrap all newsarticles */
+.content-container {
+    max-width: 955px; /* maximum width for the container */
+    margin: 0 auto; 
+    overflow-y: auto; 
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+
+.content-container::-webkit-scrollbar {
+    width: 16px;
+}
+
+.content-container::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+.content-container::-webkit-scrollbar-thumb {
+    background-color: #8f54a0;
+    border-radius: 0px;
+    border: 2px solid #ffffff;
 }
 
 .articles-container {
     background-color: #fff;
-    border: 2px solid #b1b0bd;
-    padding: 30px;
+    border: 1px solid #b1b0bd;
+    padding: 70px;
     margin-top: 20px;
     margin-bottom: 50px;
-    width: 40%;
+    width: 100%;
     gap: 1em;
     text-align: center;
 }
@@ -32,18 +106,30 @@ body {
 
 /* Style for each grid item (article) */
 .news-list li {
-    box-shadow: 5px 2px 0px 0px #d2d2d3;
-    border-radius: 15px;
-    overflow: hidden; /* Ensure content doesn't overflow the rounded corners */
+    display: grid;
+    grid-template-columns: 1fr 0.8fr; /* Two columns: one for text, one for image */
+    background-color: #d5d5d5;
+    padding: .5vw;
+    /* box-shadow: 5px 2px 0px 0px #d2d2d3; */
+    overflow: hidden; 
+    box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .13), 0 1px 4px 0 rgba(0, 0, 0, .11);
 }
 
-/* Style for article images */
+/* Style for article text (left side) */
+.news-list li div.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 20px; 
+    background-color: #000;
+    height: 100%; 
+}
+
+/* Style for article images (right side) */
 .news-list li img {
-    width: 90%;
-    height: 50vh;
-    max-height: 200px;
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
-    border-radius: 15px 15px 0 0;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
 }
 
 /* Style for article titles */
@@ -54,14 +140,22 @@ body {
     text-transform: uppercase;
     text-align: center;
     text-decoration: none;
-    display: block; /* Ensure the title takes full width of the container */
-    padding: 10px; /* Add some padding for better visibility */
+    display: block; 
+    padding: 10px; 
+    transition: color 0.3s ease-in-out; 
+
+    border-bottom: 1px solid #d2d2d3; 
+    margin-top: 10px;
+}
+
+.news-list li a:hover {
+    color: #ff9900; 
 }
 
 /* Style for article descriptions */
 .news-list li p {
-    font-size: 15px;
-    color: #aaaaaa;
+    font-size: 12.5px;
+    color: #dbdbdb;
     text-align: center;
     padding: 10px;
 }
@@ -72,33 +166,61 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    position: fixed;
     bottom: 0;
     background-color: #fff;
     padding: 10px;
-    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 8px -2px rgba(9, 30, 66, 0.25), 0px 0px 0px 1px rgba(9, 30, 66, 0.08);
 }
 
 /* Style for previous and next buttons */
 .pagination-container button {
     cursor: pointer;
     border: 1px solid #888888;
-    background: #a9bdcc;
+    background: #878916;
     color: white;
     padding: 8px;
 }
 
-/* Add these styles for category buttons */
+/* Add these styles for category buttons TOP OF PAGE */
 .category-buttons {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 9%;
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center; /* Center the buttons vertically */
+    margin-top: 5%;
 }
 
 .category-buttons button {
     cursor: pointer;
     border: 1px solid #888888;
-    background: #a9bdcc;
+    background: #640f71;
+    text-transform: uppercase;
     color: white;
-    padding: 8px;
+    /* padding: 8px; */
+    padding: 10px 20px;
+    margin: 26px;
+    width: 30vw;
+    height: 10vh;
+    transition: background 0.5s ease-in-out;
+}
+
+.category-buttons button::before {
+    content: "";
+    transform: translateX(-150%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(254, 174, 0);
+    transition: transform 0.5s ease-in-out;
+    z-index: -1;
+}
+
+.category-buttons button span {
+    position: relative;
+    z-index: 1;
+}
+
+.category-buttons button:hover {
+    background: #ff9900; 
 }
