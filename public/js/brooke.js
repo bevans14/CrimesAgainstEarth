@@ -3,6 +3,33 @@ const form = document.getElementById("cityForm")
 const input = document.getElementById("cityInput")
 let message = document.getElementById("message")
 
+//slides functionality
+
+let slideIndex = 0;
+const slides = document.querySelectorAll('.slides');
+
+function showSlides() {
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = 'none';
+    slides[i].classList.remove('fade');
+  }
+  
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  
+  slides[slideIndex - 1].style.display = 'block';
+  slides[slideIndex - 1].classList.add('fade');
+  setTimeout(showSlides, 6000);
+}
+
+showSlides();
+
+
+
+
+
 form.addEventListener('submit', (e)=> {
     e.preventDefault();
     const location = input.value;
@@ -16,7 +43,7 @@ form.addEventListener('submit', (e)=> {
                 if (AQI > 100) {
                     message.textContent = `Oh no! The air quality index of your city is ${AQI}. That's not good! The main pollutant is ${mainPollutant}. See how you can help here.`;
                 } else {
-                    message.textContent = `Yay! The air quality index of your city is ${AQI}. The main pollutant is ${mainPollutant}.`;
+                    message.textContent = `The air quality index of your city is ${AQI}. The main pollutant is ${mainPollutant}. Not bad.`;
                 }
             }
         })
