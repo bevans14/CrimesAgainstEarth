@@ -162,21 +162,19 @@ const questions = [
     ]
   },
   {
-    question: 'How many trees does it take to produce enough oxygen for one person?',
+    question: "There's more carbon dioxide in our atmosphere than at any time in human history",
     answers: [
-        { text: '20 trees', correct: false },
-      { text: '10 trees', correct: true },
-      { text: '1 tree', correct: false },
-      { text: '5 trees', correct: false }
+      { text: 'True', correct: true },
+      { text: 'False', correct: false },
     ]
   },
   {
-    question: 'What is the surprising cause of the pink hue in some glaciers?',
+    question: 'What is a primary source of plastic pollution in the oceans?',
     answers: [
-        { text: 'Pollution from nearby factories', correct: false },
-        { text: 'Reflection of sunset', correct: false },
-        { text: 'Algae', correct: true },
-        { text: 'Pink snowflakes', correct: false }
+        { text: 'Industrial waste', correct: false },
+        { text: 'Recycled plastics', correct: false },
+        { text: 'Single-use plastics', correct: true },
+        { text: 'Biodegradable materials', correct: false }
     ]
   },
   {
@@ -216,12 +214,12 @@ const questions = [
     ]
   },
   {
-    question: 'Which animal species has been known to adapt to city life due to air pollution?',
+    question: 'How does deforestation impact greenhouse gas emissions?',
     answers: [
-      { text: 'Pigeons', correct: false },
-      { text: 'Rats', correct: true },
-      { text: 'Squirrels', correct: false },
-      { text: 'Bees', correct: false }
+      { text: 'Decreases carbon dioxide levels', correct: false },
+      { text: 'Releases stored carbon and reduces tree count', correct: true },
+      { text: 'Increases oxygen production', correct: false },
+      { text: 'Traps excess carbon dioxide', correct: false }
     ]
   }
 ]
