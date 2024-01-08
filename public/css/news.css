@@ -45,7 +45,7 @@ body {
     text-align: center;
     /* margin-top: 20px; */
     border: 1px solid #000;
-    background-color: #d5d5d5;
+    background-color: hsla(248, 94%, 6%, 0.898);
     padding: 51px;;
     margin: 55px;
 }
