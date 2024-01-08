@@ -15,5 +15,4 @@ async function cityRanking(city, state, country) {
         .catch(err => console.log('error', err));
 }
 
-
 module.exports = cityRanking;
