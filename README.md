@@ -1,4 +1,4 @@
-![Logo](public/img/iconWithBg.jpg)
+![Logo](public/img/iconV2.png)
  
 
 # Crimes Against Earth
