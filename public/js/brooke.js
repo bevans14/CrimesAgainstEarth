@@ -1,3 +1,4 @@
+
 const form = document.getElementById("cityForm")
 const input = document.getElementById("cityInput")
 let message = document.getElementById("message")
@@ -35,6 +36,11 @@ nextButton.addEventListener('click', () => {
   currentQuestionIndex++
   setNextQuestion()
 })
+
+window.onload = function() {
+    const questionElement = document.getElementById('question');
+    questionElement.classList.add('active');
+  };
 
 function startGame() {
   startButton.classList.add('hide')
