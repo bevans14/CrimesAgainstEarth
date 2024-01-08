@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     max-width: 100%;
-
+    background-color: hsla(248, 94%, 6%, 0.898);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -40,7 +40,13 @@ body {
 .hero-image {
     position: relative;
     z-index: 1;
-}
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;  
+  }
 
 /* .hero-image img {
     filter: brightness(60%);
@@ -103,18 +109,17 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* margin: 0 15px; Adjust margin as needed */
-    border-radius: 8px; /* Add rounded corners if desired */
+    border-radius: 8px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
     position: relative;
     width: 100%;
     height: 100%;
-    bottom: 20px; /* Add margin-bottom to create space between cards */
+    bottom: 20px;
 }
 
 .card:hover {
-    transform: scale(1.05); /* Add a slight scale effect on hover */
+    transform: scale(1.05); 
 }
 
 .card img {
@@ -122,12 +127,12 @@ section {
     width: 100%;
     object-fit: cover;
     bottom: -54px;  
-    position: relative; /* Added for positioning */
+    position: relative;
     margin: -3%;
 }
 
 .card img:nth-child(1) {
-    height: 25vh; /* Adjust the height as needed */
+    height: 25vh; 
     border-radius: 13px 57px 0px 80px;
     border: 5px solid rgb(230, 230, 230);
     background-color: rgb(240, 240, 240);
@@ -169,7 +174,7 @@ section {
     background-color: #906b6b;
     padding: 10px;
     text-align: center;
-    margin-top: auto; /* Pushes the action to the bottom */
+    margin-top: auto; 
 
 }
 
@@ -187,9 +192,9 @@ section {
 /* newsletter info box  */
 
 .newsletter-container {
-    background-color: #6fd254ff; /* Set your desired background color */
+    background-color: #6fd254ff; 
     padding: 1px;
-    width: 100%; /* Make it full-width */
+    width: 100%; 
     box-sizing: border-box;
 }
 
@@ -197,11 +202,9 @@ section {
     margin-top: 2vw;
     margin-bottom: 2vw;
     box-sizing: border-box;
-    /* padding: 8px;
-    gap: 10px; */
     display: flex;
     justify-content: center;
-    align-items: center; /* Center items vertically */
+    align-items: center; 
     flex-direction: column;
     position: relative;
     background-color: #222;
@@ -211,7 +214,6 @@ section {
     color: #855656;
     margin-bottom: 1px;
     font-size: 24px;
-    /* position: absolute; */
     display: inline-block;
     margin-top: 20px;
 }
@@ -237,7 +239,6 @@ section {
     color: #fff;
 }
 
-/* SUBMIT BUTTON HOVER */
 .footer_col0 .inputSubmit:hover {
     background-color: rgb(192, 172, 154);
     color: #fff;
