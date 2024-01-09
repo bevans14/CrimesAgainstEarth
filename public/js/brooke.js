@@ -33,7 +33,7 @@ showSlides();
 form.addEventListener('submit', (e)=> {
     e.preventDefault();
     const location = input.value;
-    fetch(`http://localhost:3000/search?location=${location}`).then((response) => {
+    fetch(`/search?location=${location}`).then((response) => {
         response.json().then((data) => {
             if(data.error) {
                 message.textContent = data.error;

@@ -1,6 +1,6 @@
 const list = document.querySelector('ul');
 
-fetch(`http://localhost:3000/popularCity`).then((response) => {
+fetch(`/popularCity`).then((response) => {
     response.json().then((data) => {
         data.forEach(location => {
             
