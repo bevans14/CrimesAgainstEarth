@@ -7,7 +7,6 @@ const cityRanking = require('./utils/resources')
 const connection = require('../dbconfig');
 
 const app = express();
-const port = process.env.PORT || 3000
 
 const publicDirPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
@@ -178,10 +177,6 @@ app.get("*", (req, res) => {
     })
 })
 
-app.listen(port, (err) => {
-    if(err) {
-        throw err;
-    } else {
-        console.log('Listening on port ' + port)
-    }
-})
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
