@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/app.js"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +16,8 @@
     "mysql2": "^3.7.0",
     "node-fetch": "^2.7.0",
     "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": "20.x"
   }
 }
