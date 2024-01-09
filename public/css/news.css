@@ -14,7 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* background-color: #f3f3f3; */
+    background-color: hsla(249, 100%, 4%, 0.962);
     margin: 0;
 }
 
@@ -45,7 +45,8 @@ body {
     text-align: center;
     /* margin-top: 20px; */
     border: 1px solid #000;
-    background-color: hsla(248, 94%, 6%, 0.898);
+    background-color: hsla(282, 96%, 10%, 0.88);
+    box-shadow: rgba(163, 36, 217, 0.163) 0px 8px 24px, rgba(80, 2, 79, 0.1) 0px 16px 56px, rgba(114, 2, 162, 0.167) 0px 24px 80px;
     padding: 51px;;
     margin: 55px;
 }
@@ -58,7 +59,7 @@ body {
 
 .intro-container p {
     font-size: 14px;
-    color: #333; 
+    color: #ffffff; 
     line-height: 1.6;
     padding: 20px;
     margin: 4em;
@@ -79,18 +80,18 @@ body {
 }
 
 .content-container::-webkit-scrollbar-track {
-    background: #ffffff;
+    background-color: hsla(282, 96%, 10%, 0.88);
 }
 
 .content-container::-webkit-scrollbar-thumb {
-    background-color: #8f54a0;
+    background-color: #8c29a7;
     border-radius: 0px;
-    border: 2px solid #ffffff;
+    /* border: 2px solid #ffffff; */
 }
 
 .articles-container {
-    background-color: #fff;
-    border: 1px solid #b1b0bd;
+    background-color: hsla(282, 96%, 10%, 0.88);
+    box-shadow: rgba(163, 36, 217, 0.163) 0px 8px 24px, rgba(80, 2, 79, 0.1) 0px 16px 56px, rgba(114, 2, 162, 0.167) 0px 24px 80px;
     padding: 70px;
     margin-top: 20px;
     margin-bottom: 50px;
@@ -107,9 +108,7 @@ body {
 /* Style for each grid item (article) */
 .news-list li {
     display: grid;
-    grid-template-columns: 1fr 0.8fr; /* Two columns: one for text, one for image */
-    background-color: #d5d5d5;
-    padding: .5vw;
+    grid-template-columns: 1fr 0.8fr; /* Two columns: one for text, one for image */   padding: .5vw;
     /* box-shadow: 5px 2px 0px 0px #d2d2d3; */
     overflow: hidden; 
     box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .13), 0 1px 4px 0 rgba(0, 0, 0, .11);
@@ -136,8 +135,8 @@ body {
 .news-list li a {
     font-size: 23px;
     font-weight: bold;
-    color: #394763;
     text-transform: uppercase;
+    color: #906b6b; 
     text-align: center;
     text-decoration: none;
     display: block; 
@@ -167,7 +166,7 @@ body {
     align-items: center;
     width: 100%;
     bottom: 0;
-    background-color: #fff;
+    background-color: hsla(282, 96%, 10%, 0.88);
     padding: 10px;
     box-shadow: 0px 4px 8px -2px rgba(9, 30, 66, 0.25), 0px 0px 0px 1px rgba(9, 30, 66, 0.08);
 }
@@ -175,8 +174,8 @@ body {
 /* Style for previous and next buttons */
 .pagination-container button {
     cursor: pointer;
-    border: 1px solid #888888;
-    background: #878916;
+    border: 1px solid #d3d3d3;
+    background-color: hsla(282, 96%, 10%, 0.88);
     color: white;
     padding: 8px;
 }
