@@ -120,7 +120,7 @@ app.get('/popularCity', (req, res) => {
         });
 })
 
-app.get('/search', (req, res) => {
+app.get('https://crimes-against-earth-c14-f582d58c9b1d.herokuapp.com/search', (req, res) => {
     if(!req.query.location) {
         return res.send('error', error)
     }
