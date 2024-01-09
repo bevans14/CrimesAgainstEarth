@@ -3,8 +3,36 @@
 }
 
 #map {
-
 margin-top: 10%;
 margin-bottom: 10%;
+box-shadow: rgba(163, 36, 217, 0.163) 0px 8px 24px, rgba(80, 2, 79, 0.1) 0px 16px 56px, rgba(114, 2, 162, 0.167) 0px 24px 80px;
+
+}
+
+
+.gridpop {
+
+    text-decoration: none; 
+    padding: 0; 
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 10%;
+    padding: 5%;
+    background-color: hsla(282, 96%, 10%, 0.88); 
+    box-shadow: rgba(163, 36, 217, 0.163) 0px 8px 24px, rgba(80, 2, 79, 0.1) 0px 16px 56px, rgba(114, 2, 162, 0.167) 0px 24px 80px;
+    margin-top: 5%;
+    margin-bottom: 0%;
+}
+
+.gridpop:hover {
+    transform: scale(1.05); 
+}
+
+#popcity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
