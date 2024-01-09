@@ -2,7 +2,6 @@
 
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family: Gotham Rounded;
   }
   
   :root {
@@ -162,7 +161,7 @@
     padding: 10px;
   }
  
-  .grid{
+  .grid2{
     width: 75%;
     margin: auto;
     margin-bottom: 50px;
