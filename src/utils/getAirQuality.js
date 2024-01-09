@@ -5,7 +5,7 @@ var requestOptions = {
     redirect: 'follow'
   };
 
-const apiKey = '5ab44386-5c65-4b55-bb3b-aa71d563eca8';
+const apiKey = '215708bc-2ead-4297-8eb3-b5260cc1c289';
 
 function getAirQual(lat, long) {
     const url = `http://api.airvisual.com/v2/nearest_city?lat=${lat}&lon=${long}&key=${apiKey}`
