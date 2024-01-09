@@ -15,3 +15,5 @@ fetch(`http://localhost:3000/popularCity`).then((response) => {
         })
     })
 })
+
+setInterval(fetchData, 3600000);
