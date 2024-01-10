@@ -5,7 +5,7 @@ var requestOptions = {
     redirect: 'follow'
 };
 
-const apiKey = '5ab44386-5c65-4b55-bb3b-aa71d563eca8';
+const apiKey = '215708bc-2ead-4297-8eb3-b5260cc1c289';
 
 async function cityRanking(city, state, country) {
     const url = `http://api.airvisual.com/v2/city?city=${city}&state=${state}&country=${country}&key=${apiKey}`;
